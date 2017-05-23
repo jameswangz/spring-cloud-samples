@@ -13,10 +13,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-		<modules>
-			<module>eureka-client</module>
-			<module>ribbon-client</module>
-		</modules>
+
+    <modules>
+        <module>eureka-client</module>
+        <module>ribbon-client</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
