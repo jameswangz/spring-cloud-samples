@@ -15,10 +15,10 @@
     </properties>
 
     <modules>
-        <module>eureka-client</module>
+        <module>compute-service</module>
         <module>ribbon-client</module>
-    <module>zuul</module>
-  </modules>
+        <module>zuul</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
