@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 5555
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    api-compute-service.path: /compute/*
+    api-compute-service.serviceId: compute-service
