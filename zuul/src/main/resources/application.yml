@@ -11,3 +11,5 @@ zuul:
   routes:
     api-compute-service.path: /compute/*
     api-compute-service.serviceId: compute-service
+    api-product-service.path: /products/*
+    api-product-service.serviceId: product-service
