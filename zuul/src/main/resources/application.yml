@@ -7,9 +7,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-zuul:
-  routes:
-    api-compute-service.path: /compute/*
-    api-compute-service.serviceId: compute-service
-    api-product-service.path: /products/*
-    api-product-service.serviceId: product-service
+#zuul:
+#  routes:
+#    compute-service:
+#      path: /compute/*
+#      serviceId: compute-service
+#    product-service:
+#      path: /products/*
+#      serviceId: product-service
