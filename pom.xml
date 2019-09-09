@@ -19,7 +19,9 @@
     </properties>
 
     <modules>
+        <module>eureka-service</module>
         <module>compute-service</module>
+        <module>product-service</module>
         <module>ribbon-client</module>
         <module>zuul</module>
     </modules>
