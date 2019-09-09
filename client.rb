@@ -14,7 +14,7 @@ class Client
 end
 
 client = Client.new
-loop do 
+#loop do 
   client.run 
   sleep 1
-end
+#end
