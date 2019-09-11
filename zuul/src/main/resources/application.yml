@@ -10,10 +10,20 @@ eureka:
 logging:
   level:
     root: DEBUG
-#  routes:
-#    compute-service:
-#      path: /compute/*
-#      serviceId: compute-service
-#    product-service:
-#      path: /products/*
-#      serviceId: product-service
+zuul:
+  routes:
+    sidecar-client:
+      path: /client/**
+      serviceId: sidecar
+      stripPrefix: false
+      sensitiveHeaders:
+    sidecar-server:
+      path: /server/**
+      serviceId: sidecar
+      stripPrefix: false
+      sensitiveHeaders:
+    compute-service:
+      path: /compute-service/**
+      serviceId: compute-service
+      stripPrefix: true
+      sensitiveHeaders:
