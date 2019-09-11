@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
@@ -21,9 +22,10 @@ public class ComputeController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add(@RequestParam Integer a, @RequestParam Integer b, HttpServletRequest request) {
-        ServiceInstance instance = client.getLocalServiceInstance();
+        List<ServiceInstance> instances = client.getInstances("compute-service");
+        instances.stream().forEach(instance -> logger.info(instance.toString()));
         Integer r = a + b;
-        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
+        logger.info("/add result:" + r);
         return r;
     }
 

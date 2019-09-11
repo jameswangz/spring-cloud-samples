@@ -9,14 +9,14 @@
 
   <parent>
     <groupId>example.springcloud</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>spring-cloud-samples-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
     </dependency>
   </dependencies>
 
