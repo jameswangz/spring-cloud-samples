@@ -1,4 +1,4 @@
-package example.springcloud;
+package example.springcloud.compute;
 
 import example.springcloud.compute.client.BusNumberClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +21,12 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient client;
 
-    @Autowired
-    private BusNumberClient busNumberClient;
-
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add(@RequestParam Integer a, @RequestParam Integer b, HttpServletRequest request) {
         List<ServiceInstance> instances = client.getInstances("compute-service");
         instances.stream().forEach(instance -> logger.info(instance.toString()));
         Integer r = a + b;
         logger.info("/add result:" + r);
-        Object busNumbers = busNumberClient.getBusNumbers();
-        logger.info(busNumbers.toString());
         return r;
     }
 
