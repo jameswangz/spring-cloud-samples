@@ -2,7 +2,9 @@
 
 #### Build project
 
+```
 mvn clean package
+```
 
 #### Setup Eureka cluster
 

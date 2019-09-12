@@ -13,13 +13,28 @@ public class GatewayApplication {
         SpringApplication.run(GatewayApplication.class, args);
     }
 
-    @Bean
-    public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-        return builder.routes().route(
-                p -> p.path("/server/**")
-                        .filters(f -> f.addRequestHeader("Hello", "World"))
-                        .uri("lb://sidecar")
-        ).build();
-    }
+//    @Bean
+//    public RouteLocator myRoutes(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                .route(
+//                        p -> p.path("/compute-service/**")
+//                                .filters(f -> f.stripPrefix(1))
+//                                .uri("lb://compute-service")
+//                )
+//                .route(
+//                        p -> p.path("/product-service/**")
+//                                .filters(f -> f.stripPrefix(1))
+//                                .uri("lb://product-service")
+//                )
+//                .route(
+//                        p -> p.path("/server/**")
+//                                .uri("lb://sidecar")
+//                )
+//                .route(
+//                        p -> p.path("/client/**")
+//                                .uri("lb://sidecar")
+//                )
+//                .build();
+//    }
 
 }
