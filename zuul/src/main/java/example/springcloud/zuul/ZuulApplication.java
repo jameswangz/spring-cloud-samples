@@ -1,4 +1,4 @@
-package example.springcloud;
+package example.springcloud.zuul;
 
 
 import org.springframework.boot.WebApplicationType;

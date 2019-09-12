@@ -1,4 +1,4 @@
-package example.springcloud;
+package example.springcloud.product;
 
 
 public class Product {
