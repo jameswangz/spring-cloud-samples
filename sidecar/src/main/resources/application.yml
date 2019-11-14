@@ -1,12 +1,12 @@
 spring:
   application:
-    name: sidecar
+    name: api-core-service
 server:
   port: 5678
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-server-1:8761/eureka/,http://eureka-server-1:8762/eureka/,http://eureka-server-3:8763/eureka/
+      defaultZone: http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/,http://eureka-server-3:8763/eureka/
 sidecar:
   port: 3000
   health-uri: http://localhost:3000/health
