@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-core-service
+server:
+  port: 5679
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/,http://eureka-server-3:8763/eureka/
+sidecar:
+  port: 3000
+  health-uri: http://localhost:3000/health
+#  health-uri: http://10.10.200.190:3000/health
+#  health-uri: http://host.docker.internal:3000/health
+#  health-uri: http://docker.for.mac.localhost:3000/health
+#zuul:
+#  routes:
+#    product-service:
+#      path: /product-service/**
+#      serviceId: product-service
+#      stripPrefix: true
+#      sensitiveHeaders:
