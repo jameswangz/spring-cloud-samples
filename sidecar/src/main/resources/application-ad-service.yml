@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ad-service
+server:
+  port: 5689
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-1:8761/eureka/,http://eureka-server-2:8762/eureka/,http://eureka-server-3:8763/eureka/
+sidecar:
+  port: 4000
+  health-uri: http://localhost:4000/health
